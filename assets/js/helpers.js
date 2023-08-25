@@ -11,3 +11,9 @@ statFormalizer = (string) => {
 formalizeHeightAndWeight = (number) => {
   return number / 10;
 };
+
+unitFormalizer = (string) => {
+  if (/height/gi.test(string)) return ' m';
+  if (/weight/gi.test(string)) return ' kg';
+  return '';
+};
